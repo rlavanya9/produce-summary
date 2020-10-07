@@ -337,9 +337,15 @@ def reverse_list_in_place(items):
         ['I', 'love', 'cookies']
     """
     #new_items = [i for i in range(len(items)-1,-1,-1)]
-    new_items = items[::-1]
-    items = new_items
+    # new_items = items[::-1]
+    # items = new_items
+    swap_number = custom_len(input_list) // 2
 
+    for i in range(swap_number):
+        current_n = input_list[i]
+        current_neg_n = input_list[(i + 1) * -1]
+        input_list[i] = current_neg_n
+        input_list[(i + 1) * -1] = current_n
     #items[::-1]
     #return items
 
